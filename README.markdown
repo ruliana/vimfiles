@@ -34,7 +34,8 @@ $ git clone https://github.com/ruliana/vimfiles.git ~/.vim
 $ echo "source ~/.vim/vimrc" > ~/.vimrc
 $ echo "source ~/.vim/gvimrc" > ~/.gvimrc
 
-$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+$ git submodule init
+$ git submodule update
 $ vim +BundleInstall +qall
 ```
 
