@@ -22,25 +22,20 @@ Requirements
 
 Git and NCurses (for Linux). Also, it works better with Gnome Terminal or GVim.
 
-```
-$ sudo apt-get install git-core ncurses
-```
-
-[Vundle](https://github.com/gmarik/vundle), the Vim plugin manager.
-
-    Vundle is a nice package manager. I find it easier than Pathogen.
-
-```
-$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-```
+[Vundle](https://github.com/gmarik/vundle), the Vim plugin manager. I find it easier than Pathogen.
 
 Install
 =======
 
 ```
+$ sudo apt-get install git-core ncurses
+
 $ git clone https://github.com/ruliana/vimfiles.git ~/.vim
 $ echo "source ~/.vim/vimrc" > ~/.vimrc
 $ echo "source ~/.vim/gvimrc" > ~/.gvimrc
+
+$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+$ vim +BundleInstall +qall
 ```
 
 If you plan to use it on terminal, set an "almost black" background (but not totally black). That will make a good constrast with column and line highlight on terminal. Also, configure your terminal to 256 colors.
