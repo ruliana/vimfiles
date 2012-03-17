@@ -221,6 +221,13 @@ nmap <S-INSERT> "+P
 " Also works with html tags
 Bundle 'tpope/vim-surround'
 
+" Make ascii tables
+" http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
+" To tabularize things separated by '|', use:
+" :Tab /|
+Bundle 'godlygeek/tabular'
+nmap <leader>t :Tab /\|<CR>
+
 "------------------------
 " 'Empower' Key mappings
 "------------------------
