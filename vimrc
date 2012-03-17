@@ -190,8 +190,8 @@ vmap <C-C> "+y
 
 vmap <S-INSERT> "+p
 vmap <C-V> "+p
-imap <S-INSERT> <CTRL-R>+
-imap <C-V> <CTRL-R>+
+imap <S-INSERT> <C-R>+
+imap <C-V> <C-R>+
 nmap <S-INSERT> "+P
 " It's a really bad idea to override this
 " since it's used to vertical selection
