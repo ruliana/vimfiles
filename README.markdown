@@ -22,33 +22,33 @@ Requirements
 
 Git and NCurses (for Linux). Also, it works better with Gnome Terminal or GVim.
 
-    ```
-    $ sudo apt-get install git-core ncurses
-    ```
+```
+$ sudo apt-get install git-core ncurses
+```
 
 [Vundle](https://github.com/gmarik/vundle), the Vim plugin manager.
 
     Vundle is a nice package manager. I find it easier than Pathogen.
 
-    ```
-    $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-    ```
+```
+$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+```
 
 Install
 =======
 
-    ```
-    $ git clone https://github.com/ruliana/vimfiles.git ~/.vim
-    $ echo "source ~/.vim/vimrc" > ~/.vimrc
-    $ echo "source ~/.vim/gvimrc" > ~/.gvimrc
-    ```
+```
+$ git clone https://github.com/ruliana/vimfiles.git ~/.vim
+$ echo "source ~/.vim/vimrc" > ~/.vimrc
+$ echo "source ~/.vim/gvimrc" > ~/.gvimrc
+```
 
-  If you plan to use it on terminal, set an "almost black" background (but not totally black). That will make a good constrast with column and line highlightsuse it on terminal, set an "almost black" background (but not totally black). That will make a good constrast with the configured column and line highlights. Also, configure your terminal to 256 colors.
+If you plan to use it on terminal, set an "almost black" background (but not totally black). That will make a good constrast with column and line highlight on terminal. Also, configure your terminal to 256 colors.
 
 Notes
 =====
 
-I *strongly* recommend you to remove the "Empower plugins" section and add your own plugins. Vim is a reaaaally poweful editor, but the learning curve can be daunting, so, start with a "minimum surprise" configuration, and add slowly add things as you need them.
+I *strongly* recommend you to remove the "Empower plugins" section and add your own plugins. Vim is a reaaaally poweful editor, but the learning curve can be daunting, so, start with a "minimum surprise" configuration, and slowly add things as you need them.
 
 Those are good plugins lists that uses Vundle:
 
