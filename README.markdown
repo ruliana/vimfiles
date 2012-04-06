@@ -28,7 +28,7 @@ Install
 =======
 
 ```
-$ sudo apt-get install git-core ncurses
+$ sudo apt-get install git-core ncurses-term
 
 $ git clone https://github.com/ruliana/vimfiles.git ~/.vim
 $ echo "source ~/.vim/vimrc" > ~/.vimrc
