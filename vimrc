@@ -35,6 +35,9 @@ nmap <leader>b :Bufferlist<CR>
 " <leader><leader><motion>
 Bundle 'Lokaltog/vim-easymotion'
 
+Bundle 'vim-coffee-script'
+autocmd BufNewFile,BufRead *.coffee set filetype=coffee
+
 
 "===============
 " Look and feel
@@ -121,6 +124,9 @@ set backspace=indent,eol,start
 
 " Prevents show matches when reload vimrc
 :nohls
+
+" Always show status line
+set laststatus=2
 
 "---------------------------------------------
 " SUGAR MODE
