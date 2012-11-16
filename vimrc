@@ -38,15 +38,20 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'vim-coffee-script'
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 
+" 'Solarized' color scheme. I liked it a lot
+Bundle 'altercation/vim-colors-solarized'
 
 "===============
 " Look and feel
 "===============
 
+syntax enable
+
 if !has("gui_running")
   if $COLORTERM == 'gnome-terminal'
     set term=gnome-256color
-    colorscheme railscasts
+    set background=dark
+    colorscheme solarized
   else
     " Emergency mode. I don't like it.
     colorscheme murphy
