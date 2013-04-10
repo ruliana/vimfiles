@@ -41,6 +41,8 @@ autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 " 'Solarized' color scheme. I liked it a lot
 Bundle 'altercation/vim-colors-solarized'
 
+Bundle 'slim-template/vim-slim'
+
 "===============
 " Look and feel
 "===============
