@@ -24,6 +24,12 @@ Bundle 'SuperTab'
 Bundle 'sandeepcr529/Buffet.vim'
 nmap <leader>b :Bufferlist<CR>
 
+" Find files the easy way
+Bundle 'git://git.wincent.com/command-t.git'
+
+Bundle 'scrooloose/nerdtree'
+nmap <leader>p :NERDTreeToggle<CR>
+
 " Easier way navigate and learn how to navigate.
 "
 " To understand what this plugin does, try the following:
@@ -248,7 +254,7 @@ Bundle 'tpope/vim-surround'
 " To tabularize things separated by '|', use:
 " :Tab /|
 Bundle 'godlygeek/tabular'
-nmap <leader>t :Tab /\|<CR>
+nmap <leader>tt :Tab /\|<CR>
 
 " Coffee script, if you like it (I do!) (http://coffeescript.org/)
 Bundle 'vim-coffee-script'
