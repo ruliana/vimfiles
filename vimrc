@@ -35,13 +35,8 @@ nmap <leader>b :Bufferlist<CR>
 " <leader><leader><motion>
 Bundle 'Lokaltog/vim-easymotion'
 
-Bundle 'vim-coffee-script'
-autocmd BufNewFile,BufRead *.coffee set filetype=coffee
-
 " 'Solarized' color scheme. I liked it a lot
 Bundle 'altercation/vim-colors-solarized'
-
-Bundle 'slim-template/vim-slim'
 
 "===============
 " Look and feel
@@ -79,8 +74,8 @@ set incsearch
 set hlsearch
 " Search is case sensitive only if
 " there is a capital letter
-set ignorecase
 set smartcase
+
 " Clear search highlights
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
@@ -101,6 +96,8 @@ set scrolloff=4
 set sidescrolloff=10
 set sidescroll=2
 
+" Always show status line
+set laststatus=2
 
 "================
 " Behavior Fixes
@@ -132,8 +129,12 @@ set backspace=indent,eol,start
 " Prevents show matches when reload vimrc
 :nohls
 
-" Always show status line
-set laststatus=2
+" New splits open _below_ the current one,
+" default is to open above o_O
+set splitbelow
+" New splits open to the _right_ of the current one,
+" default is to open left o_O
+set splitright
 
 "---------------------------------------------
 " SUGAR MODE
@@ -204,8 +205,12 @@ vmap <C-C> "+y
 vmap <S-INSERT> "+p
 vmap <C-V> "+p
 imap <S-INSERT> <C-R>+
-imap <C-V> <C-R>+
 nmap <S-INSERT> "+P
+
+" Not a good idea to remap AFTER you got used to
+" macros and g//normal =\
+" imap <C-V> <C-R>+
+
 " It's a really bad idea to override this
 " since it's used to vertical selection
 " nnoremap <C-V> "+P
@@ -241,6 +246,13 @@ Bundle 'tpope/vim-surround'
 Bundle 'godlygeek/tabular'
 nmap <leader>t :Tab /\|<CR>
 
+" Coffee script, if you like it (I do!) (http://coffeescript.org/)
+Bundle 'vim-coffee-script'
+autocmd BufNewFile,BufRead *.coffee set filetype=coffee
+
+" Slim templates (http://slim-lang.com/)
+Bundle 'slim-template/vim-slim'
+
 "------------------------
 " 'Empower' Key mappings
 "------------------------
@@ -252,5 +264,7 @@ nmap <leader>rt :%s/\s\+$//e<CR>
 nmap <leader>wl :set wrap!<CR>
 
 " Making the most used navigation keys easier to type
+" Jump to position with '
 nnoremap ' `
+" Jump to line with `
 nnoremap ` '
