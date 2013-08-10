@@ -2,6 +2,7 @@
 " Look and feel
 "===============
 
+" I like that for gvim more than solarized
 colorscheme railscasts
 
 " That make easy to read
