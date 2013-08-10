@@ -61,7 +61,11 @@ if !has("gui_running")
   highlight Pmenu ctermbg=238 gui=bold
 end
 
+" Relative numbers on left...
 set relativenumber
+" ...but the current line, which uses
+" the absolute number
+set number
 
 " Show unwanted spaces
 set list listchars=tab:»·,trail:·
