@@ -144,6 +144,9 @@ set noerrorbells visualbell t_vb=
 " Don't continue comments
 set formatoptions-=o
 
+" Remove staring comment char when joining lines
+set formatoptions+=j
+
 " Make Y consistent with C and D
 nnoremap Y y$
 
