@@ -107,6 +107,22 @@ set sidescroll=2
 " Always show status line
 set laststatus=2
 
+" Let's make a fancy status line
+set statusline=(%n)\    " buffer number
+set statusline+=%f      " relative file path
+set statusline+=%m      " modified flag
+set statusline+=\ \     " some space
+set statusline+=%([%R%H%W]%) " flags
+set statusline+=[%{strlen(&fenc)?&fenc:'none'}, " file encoding
+set statusline+=%{&ff}] " file format
+set statusline+=%y      " filetype
+set statusline+=\ \     " some space
+set statusline+=CWD:%{getcwd()} " Working dir
+set statusline+=%=      " left/right separator
+set statusline+=%v,     " cursor column (no problems with accented chars)
+set statusline+=%l/%L   " cursor line/total lines
+set statusline+=\ %P    " percent through file
+
 "================
 " Behavior Fixes
 "================
