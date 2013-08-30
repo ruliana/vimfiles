@@ -93,6 +93,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set autoindent
+set smartindent
 
 " I hate wrapped lines
 set nowrap
