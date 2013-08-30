@@ -24,9 +24,6 @@ Bundle 'SuperTab'
 Bundle 'sandeepcr529/Buffet.vim'
 nmap <leader>b :Bufferlist<CR>
 
-" Find files the easy way
-Bundle 'git://git.wincent.com/command-t.git'
-
 Bundle 'scrooloose/nerdtree'
 nmap <leader>p :NERDTreeToggle<CR>
 
@@ -241,6 +238,9 @@ nmap <S-INSERT> "+P
 " https://github.com/gmarik/vimfiles/blob/1f4f26d42f54443f1158e0009746a56b9a28b053/vimrc#L136
 " https://github.com/mutewinter/dot_vim
 "---------------------------------------
+
+" Find files the easy way
+Bundle 'git://git.wincent.com/command-t.git'
 
 " Add, change or remove surround chars or tags
 " ys<motion>) Add surrounding parenthesis
