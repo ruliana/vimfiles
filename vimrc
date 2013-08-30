@@ -5,7 +5,6 @@ let mapleader=","
 " Vundle configuration
 "======================
 filetype off
-filetype plugin indent on
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -44,8 +43,6 @@ Bundle 'altercation/vim-colors-solarized'
 "===============
 " Look and feel
 "===============
-
-syntax enable
 
 if !has("gui_running")
   if $COLORTERM == 'gnome-terminal'
@@ -281,7 +278,19 @@ Bundle 'vim-coffee-script'
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 
 " Slim templates (http://slim-lang.com/)
-Bundle 'slim-template/vim-slim'
+"Bundle 'slim-template/vim-slim'
+
+" Snippets a la TextMate and Sublime
+Bundle 'SirVer/ultisnips'
+" Same behavior as TextMate
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+
+" Required by Vundle (turned off right above)
+filetype plugin indent on
+syntax enable
 
 "------------------------
 " 'Empower' Key mappings
