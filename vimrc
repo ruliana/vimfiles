@@ -18,10 +18,9 @@ Plugin 'edsono/vim-matchit'
 " Lets use 'tab' to complete things instead of <CTRL-P>
 Plugin 'SuperTab'
 
-" Nice buffer manager!
-" mapped to <leader>b
-Plugin 'sandeepcr529/Buffet.vim'
-nmap <leader>b :Bufferlist<CR>
+" Find files and buffers the easy way
+Plugin 'git://git.wincent.com/command-t.git'
+nmap <leader>b :CommandTBuffer<CR>
 
 Plugin 'scrooloose/nerdtree'
 nmap <leader>p :NERDTreeToggle<CR>
@@ -48,9 +47,6 @@ Plugin 'altercation/vim-colors-solarized'
 " https://github.com/mutewinter/dot_vim
 "---------------------------------------
 
-" Find files the easy way
-Plugin 'git://git.wincent.com/command-t.git'
-
 " Add, change or remove surround chars or tags
 " ys<motion>) Add surrounding parenthesis
 " cs)]        Change surrounding parenthesis to brackets
@@ -71,14 +67,6 @@ autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 
 " Support to Julia language
 Plugin 'JuliaLang/julia-vim'
-
-" Snippets a la TextMate and Sublime
-Plugin 'SirVer/ultisnips'
-
-" Same behavior as TextMate
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Vim support for Graphviz files (.dot)
 Plugin 'wannesm/wmgraphviz.vim'
