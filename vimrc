@@ -6,24 +6,24 @@ let mapleader=","
 "======================
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Package (plugin) manager
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " Uses '%' to match more than the usual
-Bundle 'edsono/vim-matchit'
+Plugin 'edsono/vim-matchit'
 
 " Lets use 'tab' to complete things instead of <CTRL-P>
-Bundle 'SuperTab'
+Plugin 'SuperTab'
 
 " Nice buffer manager!
 " mapped to <leader>b
-Bundle 'sandeepcr529/Buffet.vim'
+Plugin 'sandeepcr529/Buffet.vim'
 nmap <leader>b :Bufferlist<CR>
 
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 nmap <leader>p :NERDTreeToggle<CR>
 
 " Easier way navigate and learn how to navigate.
@@ -35,10 +35,10 @@ nmap <leader>p :NERDTreeToggle<CR>
 "
 " Mapped to:
 " <leader><leader><motion>
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-easymotion'
 
 " 'Solarized' color scheme. I liked it a lot
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 
 "===============
 " Look and feel
@@ -257,34 +257,34 @@ nmap <S-INSERT> "+P
 "---------------------------------------
 
 " Find files the easy way
-Bundle 'git://git.wincent.com/command-t.git'
+Plugin 'git://git.wincent.com/command-t.git'
 
 " Add, change or remove surround chars or tags
 " ys<motion>) Add surrounding parenthesis
 " cs)]        Change surrounding parenthesis to brackets
 " ds)         Remove surrounding parenthesis
 " Also works with html tags
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 
 " Make ascii tables
 " http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
 " To tabularize things separated by '|', use:
 " :Tab /|
-Bundle 'godlygeek/tabular'
+Plugin 'godlygeek/tabular'
 nmap <leader>tt :Tab /\|<CR>
 
 " Coffee script, if you like it (I do!) (http://coffeescript.org/)
-Bundle 'vim-coffee-script'
+Plugin 'vim-coffee-script'
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 
 " Slim templates (http://slim-lang.com/)
 "Bundle 'slim-template/vim-slim'
 
 " Support to Julia language
-Bundle 'JuliaLang/julia-vim'
+Plugin 'JuliaLang/julia-vim'
 
 " Snippets a la TextMate and Sublime
-Bundle 'SirVer/ultisnips'
+Plugin 'SirVer/ultisnips'
 
 " Same behavior as TextMate
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -292,7 +292,9 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Vim support for Graphviz files (.dot)
-Bundle 'wannesm/wmgraphviz.vim'
+Plugin 'wannesm/wmgraphviz.vim'
+
+call vundle#end()
 
 " Required by Vundle (turned off right above)
 filetype plugin indent on
