@@ -282,11 +282,14 @@ autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 
 " Snippets a la TextMate and Sublime
 Bundle 'SirVer/ultisnips'
+
 " Same behavior as TextMate
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+" Vim support for Graphviz files (.dot)
+Bundle 'wannesm/wmgraphviz.vim'
 
 " Required by Vundle (turned off right above)
 filetype plugin indent on
