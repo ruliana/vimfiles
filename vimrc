@@ -280,6 +280,9 @@ autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 " Slim templates (http://slim-lang.com/)
 "Bundle 'slim-template/vim-slim'
 
+" Support to Julia language
+Bundle 'JuliaLang/julia-vim'
+
 " Snippets a la TextMate and Sublime
 Bundle 'SirVer/ultisnips'
 
