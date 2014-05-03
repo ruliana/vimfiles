@@ -13,7 +13,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Uses '%' to match more than the usual
-Bundle 'mirell/vim-matchit'
+Bundle 'edsono/vim-matchit'
 
 " Lets use 'tab' to complete things instead of <CTRL-P>
 Bundle 'SuperTab'
