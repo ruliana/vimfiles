@@ -40,26 +40,58 @@ Plugin 'Lokaltog/vim-easymotion'
 " 'Solarized' color scheme. I liked it a lot
 Plugin 'altercation/vim-colors-solarized'
 
-"===============
-" Look and feel
-"===============
+"---------------------------------------
+" 'Empower' plugins...
+"
+" I really recommend you to check the ones here:
+" https://github.com/gmarik/vimfiles/blob/1f4f26d42f54443f1158e0009746a56b9a28b053/vimrc#L136
+" https://github.com/mutewinter/dot_vim
+"---------------------------------------
 
-if !has("gui_running")
-  if $COLORTERM == 'gnome-terminal'
-    set term=gnome-256color
-    set background=dark
-    colorscheme solarized
-  else
-    " Emergency mode. I don't like it.
-    colorscheme murphy
-    highlight CursorLine term=underline cterm=underline ctermbg=none
-    highlight CursorColumn term=none cterm=none ctermbg=DarkGray
-  endif
+" Find files the easy way
+Plugin 'git://git.wincent.com/command-t.git'
 
-  " Default completion menu color is too ugly
-  " let's make it a little better
-  highlight Pmenu ctermbg=238 gui=bold
-end
+" Add, change or remove surround chars or tags
+" ys<motion>) Add surrounding parenthesis
+" cs)]        Change surrounding parenthesis to brackets
+" ds)         Remove surrounding parenthesis
+" Also works with html tags
+Plugin 'tpope/vim-surround'
+
+" Make ascii tables
+" http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
+" To tabularize things separated by '|', use:
+" :Tab /|
+Plugin 'godlygeek/tabular'
+nmap <leader>tt :Tab /\|<CR>
+
+" Coffee script, if you like it (I do!) (http://coffeescript.org/)
+Plugin 'vim-coffee-script'
+autocmd BufNewFile,BufRead *.coffee set filetype=coffee
+
+" Support to Julia language
+Plugin 'JuliaLang/julia-vim'
+
+" Snippets a la TextMate and Sublime
+Plugin 'SirVer/ultisnips'
+
+" Same behavior as TextMate
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" Vim support for Graphviz files (.dot)
+Plugin 'wannesm/wmgraphviz.vim'
+
+call vundle#end()
+
+" Required by Vundle (turned off right above)
+filetype plugin indent on
+syntax enable
+
+"============================
+" End of Vundle configuration
+"============================
 
 " Relative numbers on left...
 set relativenumber
@@ -239,66 +271,26 @@ nmap <S-INSERT> "+P
 " since it's used to vertical selection
 " nnoremap <C-V> "+P
 
-"============================================
-" 'EMPOWER' SECTION
-"
-" Everything is this section can be safely
-" removed.
-" You should add things here as you learn OR
-" put things you like.
-"============================================
+"===============
+" Look and feel
+"===============
 
-"---------------------------------------
-" 'Empower' plugins...
-"
-" I really recommend you to check the ones here:
-" https://github.com/gmarik/vimfiles/blob/1f4f26d42f54443f1158e0009746a56b9a28b053/vimrc#L136
-" https://github.com/mutewinter/dot_vim
-"---------------------------------------
+if !has("gui_running")
+  if $COLORTERM == 'gnome-terminal'
+    set term=gnome-256color
+    set background=dark
+    colorscheme solarized
+  else
+    " Emergency mode. I don't like it.
+    colorscheme murphy
+    highlight CursorLine term=underline cterm=underline ctermbg=none
+    highlight CursorColumn term=none cterm=none ctermbg=DarkGray
+  endif
 
-" Find files the easy way
-Plugin 'git://git.wincent.com/command-t.git'
-
-" Add, change or remove surround chars or tags
-" ys<motion>) Add surrounding parenthesis
-" cs)]        Change surrounding parenthesis to brackets
-" ds)         Remove surrounding parenthesis
-" Also works with html tags
-Plugin 'tpope/vim-surround'
-
-" Make ascii tables
-" http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
-" To tabularize things separated by '|', use:
-" :Tab /|
-Plugin 'godlygeek/tabular'
-nmap <leader>tt :Tab /\|<CR>
-
-" Coffee script, if you like it (I do!) (http://coffeescript.org/)
-Plugin 'vim-coffee-script'
-autocmd BufNewFile,BufRead *.coffee set filetype=coffee
-
-" Slim templates (http://slim-lang.com/)
-"Bundle 'slim-template/vim-slim'
-
-" Support to Julia language
-Plugin 'JuliaLang/julia-vim'
-
-" Snippets a la TextMate and Sublime
-Plugin 'SirVer/ultisnips'
-
-" Same behavior as TextMate
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
-" Vim support for Graphviz files (.dot)
-Plugin 'wannesm/wmgraphviz.vim'
-
-call vundle#end()
-
-" Required by Vundle (turned off right above)
-filetype plugin indent on
-syntax enable
+  " Default completion menu color is too ugly
+  " let's make it a little better
+  highlight Pmenu ctermbg=238 gui=bold
+end
 
 "------------------------
 " 'Empower' Key mappings
