@@ -34,10 +34,8 @@ $ git clone https://github.com/ruliana/vimfiles.git ~/.vim
 $ echo "source ~/.vim/vimrc" > ~/.vimrc
 $ echo "source ~/.vim/gvimrc" > ~/.gvimrc
 
-$ cd ~/.vim
-$ git submodule init
-$ git submodule update
-$ vim +BundleInstall +qall
+$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+$ vim +PluginInstall +qall
 ```
 
 If you plan to use it on terminal, set an "almost black" background (but not totally black). That will make a good constrast with column and line highlight on terminal. Also, configure your terminal to 256 colors.
@@ -55,4 +53,5 @@ Those are good plugins lists that uses Vundle:
 Changelog
 =========
 
+2014-05-02 - Updatin Vundle version
 2012-11-16 - Changing from "RailsCasts" color scheme to "Solarized"
