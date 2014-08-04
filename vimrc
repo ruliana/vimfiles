@@ -12,6 +12,8 @@ call vundle#begin()
 " Package (plugin) manager
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'vim-ruby/vim-ruby'
+
 " Uses '%' to match more than the usual
 Plugin 'edsono/vim-matchit'
 
