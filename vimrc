@@ -267,14 +267,16 @@ nmap <S-INSERT> "+P
 
 if !has("gui_running")
   if $COLORTERM == 'gnome-terminal'
-    set term=gnome-256color
-    set background=dark
-    colorscheme solarized
+  "  set term=gnome-256color
+  "  set background=dark
+  "  colorscheme solarized
+    highlight CursorLine term=none cterm=none ctermbg=Black
+    highlight CursorColumn term=none cterm=none ctermbg=Black
   else
-    " Emergency mode. I don't like it.
-    colorscheme murphy
-    highlight CursorLine term=underline cterm=underline ctermbg=none
-    highlight CursorColumn term=none cterm=none ctermbg=DarkGray
+  "  " Emergency mode. I don't like it.
+  "  colorscheme murphy
+    highlight CursorLine term=none cterm=none ctermbg=Black
+    highlight CursorColumn term=none cterm=none ctermbg=Black
   endif
 
   " Default completion menu color is too ugly
