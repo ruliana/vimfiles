@@ -28,7 +28,15 @@ Install
 =======
 
 ```
+
+# Debian and like
 $ sudo apt-get install git-core ncurses-term
+
+# Fedora
+$ sudo dnz install git ncurses-term
+
+# Arch Linux
+$ sudo pacman -Sy git-core ncurses-term
 
 $ git clone https://github.com/ruliana/vimfiles.git ~/.vim
 $ echo "source ~/.vim/vimrc" > ~/.vimrc
