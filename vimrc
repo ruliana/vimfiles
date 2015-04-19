@@ -36,7 +36,7 @@ nmap <leader>p :NERDTreeToggle<CR>
 "
 " Mapped to:
 " <leader><leader><motion>
-Plugin 'Lokaltog/vim-easymotion'
+"Plugin 'Lokaltog/vim-easymotion'
 
 " 'Solarized' color scheme. I liked it a lot
 Plugin 'altercation/vim-colors-solarized'
@@ -64,11 +64,11 @@ Plugin 'godlygeek/tabular'
 nmap <leader>tt :Tab /\|<CR>
 
 " Coffee script, if you like it (I do!) (http://coffeescript.org/)
-Plugin 'vim-coffee-script'
-autocmd BufNewFile,BufRead *.coffee set filetype=coffee
+"Plugin 'vim-coffee-script'
+"autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 
 " Support to Julia language
-Plugin 'JuliaLang/julia-vim'
+"Plugin 'JuliaLang/julia-vim'
 
 " Vim support for Graphviz files (.dot)
 Plugin 'wannesm/wmgraphviz.vim'
