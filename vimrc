@@ -180,6 +180,12 @@ set backspace=indent,eol,start
 nnoremap / /\v
 vnoremap / /\v
 
+" Use cursor keys to navigate buffers.
+map <Right> :bnext<CR>
+map <Left> :bprev<CR>
+imap <Right> <ESC>:bnext<CR>
+imap <Left> <ESC>:bprev<CR>
+
 " New splits open _below_ the current one,
 " default is to open above o_O
 set splitbelow
