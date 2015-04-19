@@ -175,6 +175,11 @@ set backspace=indent,eol,start
 " Prevents show matches when reload vimrc
 :nohls
 
+" PCRE like regex (very magic). Easier to deal with
+" if you are used to Regex in other languages
+nnoremap / /\v
+vnoremap / /\v
+
 " New splits open _below_ the current one,
 " default is to open above o_O
 set splitbelow
