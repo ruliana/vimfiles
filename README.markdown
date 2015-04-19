@@ -33,7 +33,7 @@ Install
 $ sudo apt-get install git-core ncurses-term
 
 # Fedora
-$ sudo dnz install git ncurses-term
+$ sudo dnf install git ncurses-term
 
 # Arch Linux
 $ sudo pacman -Sy git-core ncurses-term
@@ -58,8 +58,3 @@ Those are good plugins lists that uses Vundle:
 * [gmarik's vimrc](https://github.com/gmarik/vimfiles/blob/1f4f26d42f54443f1158e0009746a56b9a28b053/vimrc#L136)
 * [mutewinter's Vim Config of Champions](https://github.com/mutewinter/dot_vim)
 
-Changelog
-=========
-
-2014-05-02 - Updatin Vundle version
-2012-11-16 - Changing from "RailsCasts" color scheme to "Solarized"
