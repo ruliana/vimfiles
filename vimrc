@@ -63,6 +63,14 @@ Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
 nmap <leader>tt :Tab /\|<CR>
 
+" Enables CamelCase and snake_case motion
+" ,w ,b ,e move through both (analogous to w b e)
+" also, it defines them as 'inner words', so we
+" can use ci,w to change part of the a CamelCased
+" word.
+" See docs at http://github.com/bkad/CamelCaseMotion
+Plugin 'bkad/CamelCaseMotion'
+
 " Coffee script, if you like it (I do!) (http://coffeescript.org/)
 "Plugin 'vim-coffee-script'
 "autocmd BufNewFile,BufRead *.coffee set filetype=coffee
