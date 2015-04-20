@@ -58,3 +58,23 @@ Those are good plugins lists that uses Vundle:
 * [gmarik's vimrc](https://github.com/gmarik/vimfiles/blob/1f4f26d42f54443f1158e0009746a56b9a28b053/vimrc#L136)
 * [mutewinter's Vim Config of Champions](https://github.com/mutewinter/dot_vim)
 
+Troubleshooting
+===============
+
+** Command-T is not working **
+
+That happens sometimes when I update Ruby in my box. Commant-T needs vim compiled with ruby support. Test if you have a support executing:
+
+:ruby 1
+
+If you got "1" and no errors, you are good, otherwise you need to install (or compile) vim with ruby support. Search on Google for that, but, usually, distributions have vim packages with Ruby (and Python, and lots of stuff) already included.
+
+If you DO have ruby support enable, than, recompile Command-T:
+
+```bash
+  cd ~/.vim/bundle/command-t/ruby/command-t
+  ruby extconf.rb
+  make
+```
+
+You should use **the same ruby version** your vim was compiled.
