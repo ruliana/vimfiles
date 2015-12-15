@@ -21,8 +21,10 @@ Plugin 'edsono/vim-matchit'
 Plugin 'SuperTab'
 
 " Find files and buffers the easy way
-Plugin 'git://git.wincent.com/command-t.git'
-nmap <leader>b :CommandTBuffer<CR>
+Plugin 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+nmap <leader>b :CtrlPBuffer<CR>
 
 Plugin 'scrooloose/nerdtree'
 nmap <leader>p :NERDTreeToggle<CR>
