@@ -81,6 +81,12 @@ Plugin 'bkad/CamelCaseMotion'
 " Vim support for Graphviz files (.dot)
 Plugin 'wannesm/wmgraphviz.vim'
 
+" Support for ZenCoding (Emmet)
+" Nice for HTML creation
+" Activation key: <c-y>
+" https://github.com/mattn/emmet-vim
+Plugin 'mattn/emmet-vim'
+
 call vundle#end()
 
 " Required by Vundle (turned off right above)

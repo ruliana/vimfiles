@@ -6,7 +6,7 @@
 colorscheme railscasts
 
 " That make easy to read
-set guifont=Monospace\ Regular\ 11
+set guifont=Hack\ Regular\ 11
 set linespace=4
 
 " Default completion menu color is too ugly
